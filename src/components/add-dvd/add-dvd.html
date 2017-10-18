@@ -1,16 +1,17 @@
 <form id="form">
     <div class="container">
         <div class="row">
-            <div class="col-md-1"></div>
+
             <div class="col-md-2">
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon2">Dvd# :</span>
                     <input type="number" class="form-control" placeholder="#DvD" aria-describedby="sizing-addon2" id="numOfDvd" min="0">
                 </div>
             </div>
+            <div class="col-md-1"></div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <select class="form-control" id="genre1" style="width:150px">
+                    <select class="form-control" id="genre1">
                         <option id="default" selected disabled="">
                             <label for="default">Genre</label>
                         </option>>
@@ -28,18 +29,58 @@
                     </select>
                 </div>
             </div>
+            <div class="col-md-1"></div>
             <div class="col-md-2">
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon2">Year:</span>
-                    <input type="number" class="form-control" placeholder="#DvD" aria-describedby="sizing-addon2" id="numOfDvd" min="0">
+                    <input type="number" class="form-control" placeholder="Year" aria-describedby="sizing-addon2" id="numOfDvd" min="0">
                 </div>
             </div>
+            <div class="col-md-1"></div>
             <div class="col-md-2">
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon2">Time :</span>
-                    <input type="number" class="form-control" placeholder="#DvD" aria-describedby="sizing-addon2" id="numOfDvd" min="0">
+                    <input type="number" class="form-control" placeholder="Time" aria-describedby="sizing-addon2" id="numOfDvd" min="0">
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">Name of movie :</span>
+                    <input type="text" class="form-control" placeholder="Name of movie" aria-describedby="sizing-addon2" id="nMovie" required>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">Cast :</span>
+                    <input type="text" class="form-control" placeholder="Cast" aria-describedby="sizing-addon2" id="cast">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">Poster :</span>
+                    <input type="text" class="form-control" aria-describedby="sizing-addon2" placeholder="Enter poster url" id="poster">
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon2">Video trailer :</span>
+                    <input type="text" class="form-control" placeholder="Add video url only from youtube" aria-describedby="sizing-addon2" id="video">
+                </div>
+            </div>
+        </div>
+        <br>
+        <input type="subbmit" value="Save" class="btn btn-primary btn-block">
     </div>
+
 </form>
