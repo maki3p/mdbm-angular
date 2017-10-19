@@ -1,4 +1,4 @@
-<form id="formAdd" >
+<form   [formGroup]="movieForm" (ngSubmit)="createMovie($event)" novalidate >
     <div class="container">
         <div class="row">
 
@@ -11,7 +11,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <select class="form-control" id="genre1">
+                    <select class="form-control" id="genre">
                         <option id="default" selected disabled="">
                             <label for="default">Genre</label>
                         </option>>
@@ -47,8 +47,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="input-group">
-                    <span class="input-group-addon" id="sizing-addon2">Name of movie :</span>
-                    <input type="text" class="form-control" placeholder="Name of movie" aria-describedby="sizing-addon2" id="nMovie" required>
+                    <span class="input-group-addon" id="sizing-addon2">Movie Title :</span>
+                    <input type="text" class="form-control" placeholder="Movie Title" aria-describedby="sizing-addon2" id="mTitle" required>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
             </div>
         </div>
         <br>
-        <input type="subbmit" value="Save" class="btn btn-primary btn-block">
+        <input  [disabled]="!contactForm.valid" type="submit" value="Save" class="btn btn-outline-primary btn-block">
     </div>
 
 </form>
