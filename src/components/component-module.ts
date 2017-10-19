@@ -4,10 +4,12 @@ import {ReactiveFormsModule,FormsModule, } from "@angular/forms"
 import {AddDvdComponent} from "./add-dvd"
 import { WelcomeComponent} from "./welcome"
 import { MovieService } from "../services/movie.service";
+import {MovieLibaryComponent} from "./movie-libary"
 @NgModule({
   declarations: [
   AddDvdComponent,
-  WelcomeComponent
+  WelcomeComponent,
+  MovieLibaryComponent
   ],
   imports: [
     CommonModule,

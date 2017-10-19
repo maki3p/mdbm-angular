@@ -1,5 +1,5 @@
 import {Routes } from "@angular/router"
-import {AddDvdComponent,WelcomeComponent} from "../components";
+import {AddDvdComponent,WelcomeComponent,MovieLibaryComponent} from "../components";
 
 
 export const routes: Routes = [
@@ -7,6 +7,10 @@ export const routes: Routes = [
     {
         path: 'add-dvd', 
         component: AddDvdComponent
+    },
+    {
+        path:"movie-libary",
+        component:MovieLibaryComponent
     },
     {
         path:"welcome",

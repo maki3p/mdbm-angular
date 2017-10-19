@@ -1,0 +1,26 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "dvdNumber": 2,
+      "genre": "",
+      "year": 21,
+      "time": "",
+      "movieTitle": "2",
+      "cast": "",
+      "coverUrl": "",
+      "trailerUrl": ""
+    },
+    {
+      "id": 2,
+      "dvdNumber": 2,
+      "genre": "Horror",
+      "year": "",
+      "time": "",
+      "movieTitle": "23",
+      "cast": "",
+      "coverUrl": "",
+      "trailerUrl": ""
+    }
+  ]
+}
