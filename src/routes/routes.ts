@@ -13,7 +13,11 @@ export const routes: Routes = [
         component:MovieLibaryComponent
     },
     {
-        path:"welcome",
+        path: 'add-dvd/:id', 
+        component: AddDvdComponent
+    },
+    {
+        path:"**",
         component:WelcomeComponent
     }
 

@@ -21,6 +21,17 @@
       "cast": "",
       "coverUrl": "",
       "trailerUrl": ""
+    },
+    {
+      "id": 3,
+      "dvdNumber": 2,
+      "genre": "Comedy",
+      "year": 2017,
+      "time": 120,
+      "movieTitle": "Moivasf",
+      "cast": "afml asflmas asflas  asfla sa slfkas",
+      "coverUrl": "asfasfas",
+      "trailerUrl": "sfafasfas"
     }
   ]
 }

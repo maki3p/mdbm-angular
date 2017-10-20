@@ -12,6 +12,9 @@ import {MovieService} from "../../services/movie.service"
 export class MovieLibaryComponent implements OnInit{
     movieList: Movie[];
 
+    navigateToEdit(id: string) {
+        this.router.navigate([ "add-dvd", id]);
+    }
     constructor(private router: Router, private movieService: MovieService){
         
     }

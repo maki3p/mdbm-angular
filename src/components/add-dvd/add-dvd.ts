@@ -27,7 +27,7 @@ export class AddDvdComponent {
                 if (data) {
                     this.movie = data;
                     this.movieForm.setValue({dvdNumber: data.dvdNumber, movieTitle: data.movieTitle, year: data.year,
-                        time: data.time, genre:data.genre, coverUrl:data.coverUrl, trailerUrl: data.trailerUrl });
+                        time: data.time, genre:data.genre, coverUrl:data.coverUrl, trailerUrl: data.trailerUrl, cast :data.cast});
 
                 }
             });
