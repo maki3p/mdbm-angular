@@ -1,5 +1,5 @@
 import {Routes } from "@angular/router"
-import {AddDvdComponent,WelcomeComponent,MovieLibaryComponent} from "../components";
+import {AddDvdComponent,WelcomeComponent,MovieLibaryComponent,MovieDetailsComoponent} from "../components";
 
 
 export const routes: Routes = [
@@ -15,6 +15,10 @@ export const routes: Routes = [
     {
         path: 'add-dvd/:id', 
         component: AddDvdComponent
+    },
+    {
+        path:"movie-details",
+        component: MovieDetailsComoponent
     },
     {
         path:"**",

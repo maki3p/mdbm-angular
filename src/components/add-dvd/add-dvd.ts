@@ -59,6 +59,7 @@ export class AddDvdComponent {
         this.movie.coverUrl = this.movieForm.value["coverUrl"],
         this.movie.trailerUrl = this.movieForm.value["trailerUrl"]
         console.log(this.movie);
+      
         if (this.movie.id) {
             this.movieService.update(this.movie).subscribe(data => {
                 if (data) {
@@ -75,8 +76,11 @@ export class AddDvdComponent {
                     alert("something went wrong");
                 }
             });
+        
         }
+        
     }
+  
     @Input()  movie: Movie = Movie.empty();
 
 }

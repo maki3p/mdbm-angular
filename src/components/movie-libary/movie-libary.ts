@@ -15,6 +15,7 @@ export class MovieLibaryComponent implements OnInit{
     navigateToEdit(id: string) {
         this.router.navigate([ "add-dvd", id]);
     }
+  
     constructor(private router: Router, private movieService: MovieService){
         
     }
