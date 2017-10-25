@@ -11,7 +11,7 @@ export class Movie {
 
     public static empty(): Movie {
         return {
-            id:"",
+            id:null,
             dvdNumber: null ,
             genre: "",
             year: null,

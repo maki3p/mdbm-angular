@@ -3,7 +3,7 @@ import { Http } from "@angular/http";
 import { Movie } from "../models/movie";
 import { Observable } from "rxjs";
 import "rxjs/add/operator/map";
-
+import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class MovieService {
     private baseUrl: string;
@@ -22,13 +22,14 @@ export class MovieService {
             }, error => { console.warn(error); });
     }
 
-    get(id: number) {
+    get(id: string) {
         return this.http.get(this.moviesRoute + "/" + id)
             .map(res => {
                 let result = res.json() as Movie;
                 return result;
             }, error => { console.warn(error); });
     }
+  
 
     create(movie: Movie) {
         if (movie) {

@@ -21,6 +21,10 @@ export const routes: Routes = [
         component: MovieDetailsComoponent
     },
     {
+        path:"movie-details/:id",
+        component: MovieDetailsComoponent
+    },
+    {
         path:"**",
         component:WelcomeComponent
     }

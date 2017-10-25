@@ -15,10 +15,14 @@ export class MovieLibaryComponent implements OnInit{
     navigateToEdit(id: string) {
         this.router.navigate([ "add-dvd", id]);
     }
-  
+    
+    navigateToDetails(id: string) {
+        this.router.navigate([ "movie-details", id  ]);
+    }
     constructor(private router: Router, private movieService: MovieService){
         
     }
+   
     ngOnInit() {
         this.movieService.getAll().subscribe(data=>{
             console.log(data);
