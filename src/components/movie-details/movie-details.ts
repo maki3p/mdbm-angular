@@ -5,13 +5,21 @@ import { MovieService } from "../../services/movie.service";
 
 @Component({
     selector:"movie-details",
-    templateUrl:"./movie-details.html"
+    templateUrl:"./movie-details.html",
+    styleUrls:["./movie-details.css"]
 })
 
 export class MovieDetailsComoponent implements OnInit{
-    movieList : Movie[]
-    id: string
-    movieTitle: string
+    
+    id:string;
+    dvdNumber: number;
+    genre: string;
+    year: number;
+    time: number;
+    movieTitle: string;
+    cast: string;
+    coverUrl: string;
+    trailerUrl: string;
     
     movie: Movie = Movie.empty()
     constructor(private activatedRoute: ActivatedRoute,
@@ -23,8 +31,14 @@ export class MovieDetailsComoponent implements OnInit{
         this.id = this.activatedRoute.snapshot.params[ "id" ];
         this.movieService.get(this.id).subscribe(data => {
             this.movie = data; 
-            this.movie.time
-            
+            this.movieTitle = data.movieTitle;
+            this.cast = data.cast;
+            this.coverUrl = data.coverUrl;
+            this.dvdNumber = data.dvdNumber;
+            this.time = data.time;
+            this.year = data.year;
+            this.trailerUrl = data.trailerUrl;
+            this.genre = data.genre;
         });
       
         

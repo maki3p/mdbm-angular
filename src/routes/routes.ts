@@ -17,10 +17,6 @@ export const routes: Routes = [
         component: AddDvdComponent
     },
     {
-        path:"movie-details",
-        component: MovieDetailsComoponent
-    },
-    {
         path:"movie-details/:id",
         component: MovieDetailsComoponent
     },

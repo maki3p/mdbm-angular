@@ -1,4 +1,44 @@
-<h1>{{id}}</h1>
-<h2 >{{time}}</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 id="movieTitle">{{movieTitle}}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <h5 id="genre">Genre: {{genre}}</h5>
 
-<p>{{ movie | json }}</p>
+        </div>
+        <div class="col-md-3">
+            <h5 id="time">Time: {{time}} min.</h5>
+        </div>
+        <div class="col-md-4">
+            <h5 id="year">Release year: {{year}}</h5>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-5">
+                <img src="{{coverUrl}}" alt="{{movieTitle}}-cover" id="coverUrl" class="img-thumbnail">
+
+            </div>
+
+            <br>
+            <div class="col-md-6">
+                <p>Cast:
+                    <br> {{cast}}
+                </p>
+                <div class="col-md-6">
+                        
+                    <iframe src="{{trailerUrl}}" frameborder="1"></iframe>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+
+</div>
