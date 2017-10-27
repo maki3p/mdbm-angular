@@ -19,6 +19,7 @@ export class MovieLibaryComponent implements OnInit{
     navigateToDetails(id: string) {
         this.router.navigate([ "movie-details", id  ]);
     }
+ 
     constructor(private router: Router, private movieService: MovieService){
         
     }
@@ -29,6 +30,7 @@ export class MovieLibaryComponent implements OnInit{
             this.movieList = data;
         });
     }
+    
 }
 
     

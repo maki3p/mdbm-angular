@@ -52,7 +52,4 @@ export class MovieService {
         }
         return Observable.of(null);
     }
-    
-
-
-}
+};

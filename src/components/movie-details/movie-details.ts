@@ -1,15 +1,15 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit,Sanitizer } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Movie } from "../../models/movie";
 import { MovieService } from "../../services/movie.service";
-
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
     selector:"movie-details",
     templateUrl:"./movie-details.html",
     styleUrls:["./movie-details.css"]
 })
 
-export class MovieDetailsComoponent implements OnInit{
+export class MovieDetailsComoponent implements OnInit {
     
     id:string;
     dvdNumber: number;
@@ -20,11 +20,12 @@ export class MovieDetailsComoponent implements OnInit{
     cast: string;
     coverUrl: string;
     trailerUrl: string;
-    
+  
+
     movie: Movie = Movie.empty()
     constructor(private activatedRoute: ActivatedRoute,
         private movieService: MovieService) {
-
+         
         }
       ngOnInit() {
          
@@ -39,10 +40,7 @@ export class MovieDetailsComoponent implements OnInit{
             this.year = data.year;
             this.trailerUrl = data.trailerUrl;
             this.genre = data.genre;
-        });
-      
-        
-      
-
+        });   
     }
-}
+      
+};

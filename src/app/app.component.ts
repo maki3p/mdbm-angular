@@ -6,7 +6,7 @@ import { Router } from "@angular/router"
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  date: number = Date.now();
   constructor(private router: Router){
 
   }

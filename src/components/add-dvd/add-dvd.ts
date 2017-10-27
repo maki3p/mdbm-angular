@@ -20,6 +20,7 @@ export class AddDvdComponent {
         private activatedRoute: ActivatedRoute) {
 
     }
+    
     ngOnInit() {
         let id = this.activatedRoute.snapshot.params[ "id" ];
         if (id) {
@@ -56,8 +57,8 @@ export class AddDvdComponent {
         this.movie.genre = this.movieForm.value["genre"];
         this.movie.time = this.movieForm.value["time"];
         this.movie.year = this.movieForm.value["year"];
-        this.movie.coverUrl = this.movieForm.value["coverUrl"],
-        this.movie.trailerUrl = this.movieForm.value["trailerUrl"]
+        this.movie.coverUrl = this.movieForm.value["coverUrl"];
+        this.movie.trailerUrl = this.movieForm.value["trailerUrl"];
         console.log(this.movie);
       
         if (this.movie.id) {
@@ -82,5 +83,5 @@ export class AddDvdComponent {
     }
   
     @Input()  movie: Movie = Movie.empty();
-
+    
 }
