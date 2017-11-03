@@ -39,7 +39,7 @@ export class MovieLibaryComponent implements OnInit {
     deleteMovie(id) {
         this.movieService.deleteMovie(id)
             .subscribe(data => {
-                console.log("movie deleted!")
+                alert("Movie is Deleted")
                 this.router.navigate(["add-dvd"])
             })
     }
