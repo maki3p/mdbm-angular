@@ -6,12 +6,15 @@ import { WelcomeComponent} from "./welcome"
 import { MovieService } from "../services/movie.service";
 import {MovieLibaryComponent} from "./movie-libary"
 import { MovieDetailsComoponent} from "./movie-details"
+
+
 @NgModule({
   declarations: [
   AddDvdComponent,
   WelcomeComponent,
   MovieLibaryComponent,
-  MovieDetailsComoponent
+  MovieDetailsComoponent,
+
   ],
   imports: [
     CommonModule,

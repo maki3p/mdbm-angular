@@ -29,7 +29,7 @@ export class MovieService {
                 return result;
             }, error => { console.warn(error); });
     }
-  
+
 
     create(movie: Movie) {
         if (movie) {
@@ -52,4 +52,15 @@ export class MovieService {
         }
         return Observable.of(null);
     }
+
+    deleteMovie(id: string): Observable<any> {
+        return this.http.delete(this.moviesRoute + "/" + id)
+        .map(res => {
+            let result = res.json() as Movie[];
+            return result;
+        }, error => { console.warn(error); });
+        
+    }
+
+
 };

@@ -28,13 +28,14 @@ export class AddDvdComponent {
                 if (data) {
                     this.movie = data;
                     this.movieForm.setValue({dvdNumber: data.dvdNumber, movieTitle: data.movieTitle, year: data.year,
-                        time: data.time, genre:data.genre, coverUrl:data.coverUrl, trailerUrl: data.trailerUrl, cast :data.cast});
+                        time: data.time, genre:data.genre, coverUrl:data.coverUrl, trailerUrl: data.trailerUrl, cast :data.cast,id:data.id});
 
                 }
             });
         } else {
             this.movie = Movie.empty();
         }
+        
     }
     movieForm: FormGroup = this.fb.group({
         movieTitle: [ "", [ Validators.required ] ],
@@ -44,8 +45,8 @@ export class AddDvdComponent {
         year:[""],
         coverUrl:[""],
         trailerUrl:[""],
-        cast:[""]
-
+        cast:[""],
+        id:[""]
     });
 
 
@@ -59,6 +60,7 @@ export class AddDvdComponent {
         this.movie.year = this.movieForm.value["year"];
         this.movie.coverUrl = this.movieForm.value["coverUrl"];
         this.movie.trailerUrl = this.movieForm.value["trailerUrl"];
+        this.movie.id = this.movieForm.value["id"]
         console.log(this.movie);
       
         if (this.movie.id) {
@@ -80,8 +82,10 @@ export class AddDvdComponent {
         
         }
         
+        
     }
   
+    
     @Input()  movie: Movie = Movie.empty();
     
 }

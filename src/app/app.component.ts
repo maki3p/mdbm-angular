@@ -13,4 +13,5 @@ export class AppComponent {
   navigateToRoute(routeKey: string): void {
     this.router.navigate([ routeKey ])
   }
+ 
 }

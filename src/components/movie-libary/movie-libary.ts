@@ -1,36 +1,48 @@
-import {Component, OnInit } from "@angular/core";
-import {Movie} from "../../models/movie";
-import {Router} from "@angular/router";
-import {MovieService} from "../../services/movie.service"
+import { Component, OnInit, ViewChild, Input } from "@angular/core";
+import { Movie } from "../../models/movie";
+import { Router, ActivatedRoute } from "@angular/router";
+import { MovieService } from "../../services/movie.service"
+import { AddDvdComponent } from "../add-dvd"
 @Component({
-    selector:"movie-libary",
-    templateUrl:"./movie-libary.html",
-    styleUrls:["./movie-libary.css"]
+    selector: "movie-libary",
+    templateUrl: "./movie-libary.html",
+    styleUrls: ["./movie-libary.css"]
 })
 
 
-export class MovieLibaryComponent implements OnInit{
+export class MovieLibaryComponent implements OnInit {
     movieList: Movie[];
-
+    movie: Movie
     navigateToEdit(id: string) {
-        this.router.navigate([ "add-dvd", id]);
+        this.router.navigate(["add-dvd", id]);
     }
-    
+
     navigateToDetails(id: string) {
-        this.router.navigate([ "movie-details", id  ]);
+        this.router.navigate(["movie-details", id]);
     }
- 
-    constructor(private router: Router, private movieService: MovieService){
-        
-    }
+
    
+    constructor(
+        private activatedRoute: ActivatedRoute,
+        private router: Router,
+        private movieService: MovieService) {
+
+    }
+
     ngOnInit() {
-        this.movieService.getAll().subscribe(data=>{
+        this.movieService.getAll().subscribe(data => {
             console.log(data);
             this.movieList = data;
         });
-    }
-    
-}
 
-    
+    }
+    deleteMovie(id) {
+        this.movieService.deleteMovie(id)
+            .subscribe(data => {
+                console.log("movie deleted!")
+                this.router.navigate(["add-dvd"])
+            })
+    }
+};
+
+
