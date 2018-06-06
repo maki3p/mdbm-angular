@@ -2,7 +2,6 @@ import { Component, OnInit,Sanitizer } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Movie } from "../../models/movie";
 import { MovieService } from "../../services/movie.service";
-import { Youtube} from "../../pipe/youtube"
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 
 @Component({

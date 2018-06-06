@@ -7,11 +7,9 @@ import {HttpModule} from "@angular/http"
 import { MovieService } from "../services/movie.service";
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "../routes/routes-module";
-import { Youtube} from "../pipe/youtube"
 @NgModule({
   declarations: [
     AppComponent,
-    Youtube
   ],
   imports: [
     BrowserModule,
