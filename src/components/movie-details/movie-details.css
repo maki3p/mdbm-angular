@@ -22,6 +22,9 @@ p{
     text-align: start;
 }
 iframe{
-    width: 580;
-    height: 480;
+    height: 480px;
+    width: 720px ;
+}
+.video{
+    margin-top:  5%;
 }

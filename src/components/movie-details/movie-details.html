@@ -26,13 +26,20 @@
             <br>
             <div class="col-md-6">
                 <p>Cast:
-                    <br> {{cast}}
+                    <br> {{cast | uppercase}}
                 </p>
-                <div class="col-md-6">   
-                    <iframe  width="640" height="390" src=""></iframe>
+                <div class="col-md-6">
+                  
                 </div>
             </div>
+
+        </div>
+        
+            <div class="col-md-12 text-center" id="video">
+                <iframe [src]="trustedDashboardUrl" frameborder="1"></iframe>
+
             
+
         </div>
 
     </div>

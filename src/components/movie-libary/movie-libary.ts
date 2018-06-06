@@ -31,8 +31,7 @@ export class MovieLibaryComponent implements OnInit {
 
     ngOnInit() {
         this.movieService.getAll().subscribe(data => {
-            console.log(data);
-            this.movieList = data;
+            this.movieList = data
         });
 
     }
@@ -40,8 +39,8 @@ export class MovieLibaryComponent implements OnInit {
         this.movieService.deleteMovie(id)
             .subscribe(data => {
                 alert("Movie is Deleted")
-                this.router.navigate(["add-dvd"])
-            })
+                this.router.navigate(["add-dvd"]) 
+            })     
     }
 };
 

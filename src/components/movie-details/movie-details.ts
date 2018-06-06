@@ -2,11 +2,14 @@ import { Component, OnInit,Sanitizer } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { Movie } from "../../models/movie";
 import { MovieService } from "../../services/movie.service";
-import { DomSanitizer } from '@angular/platform-browser';
+import { Youtube} from "../../pipe/youtube"
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+
 @Component({
     selector:"movie-details",
     templateUrl:"./movie-details.html",
     styleUrls:["./movie-details.css"]
+
 })
 
 export class MovieDetailsComoponent implements OnInit {
@@ -20,12 +23,13 @@ export class MovieDetailsComoponent implements OnInit {
     cast: string;
     coverUrl: string;
     trailerUrl: string;
-  
+    trustedDashboardUrl : SafeUrl;
 
+  
     movie: Movie = Movie.empty()
     constructor(private activatedRoute: ActivatedRoute,
-        private movieService: MovieService) {
-         
+        private movieService: MovieService, private sanitizer: DomSanitizer) {
+            
         }
       ngOnInit() {
          
@@ -40,7 +44,9 @@ export class MovieDetailsComoponent implements OnInit {
             this.year = data.year;
             this.trailerUrl = data.trailerUrl;
             this.genre = data.genre;
+            this.trustedDashboardUrl = this.sanitizer.bypassSecurityTrustResourceUrl(data.trailerUrl)
         });   
     }
-      
+   
+   
 };
